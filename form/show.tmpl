@@ -1,0 +1,15 @@
+{{ define "Show" }}
+  {{ template "Header" }}
+    <div class="container">
+   <div class="p-3 mb-2 bg-light text-dark" style="min-height:700px">
+    {{ template "Menu"  }}
+    <h2> Register {{ .Id }} </h2>
+      <p class="form-label"><b>Name:</b> {{ .Name }}</p>
+      <p class="form-label"><b>Id:</b>  {{ .Id }}</p>
+      <p class="form-label"><b>Salary:</b>  {{ .Salary }}</p>
+      <p class="form-label"><b>Destignation:</b>  {{ .Destignation }}</p><br /> <a href="/edit?id={{ .Id }}">Edit</a></p>
+     <hr>
+  {{ template "Footer" }}
+  </div>
+  </div>
+{{ end }}

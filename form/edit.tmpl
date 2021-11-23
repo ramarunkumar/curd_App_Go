@@ -1,0 +1,24 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+  <div class="container">
+     <div class="p-3 mb-2 bg-light text-dark" style="min-height:700px">
+    {{ template "Menu" }} 
+    
+   <h2>Update Data</h2>  
+    <form method="POST" action="update">
+    
+      <input type="hidden" name="id" value="{{ .Id }}" />
+
+      <label class="form-label" > Name </label><input type="text" class="form-control" id="exampleInputEmail1" name="name" value="{{ .Name }}"  /><br />
+      
+      <label class="form-label"> Salary </label><input type="text" class="form-control" id="exampleInputEmail1" name="city" value="{{ .Salary }}"  /><br />
+      <label class="form-label"> Destignation </label><input type="text" class="form-control" id="exampleInputEmail1" name="city" value="{{ .Destignation }}"  /><br />
+
+
+      <input type="submit" class="btn btn-info" value="Save user" />
+    </form><br />    
+  
+</div>
+</div>
+  {{ template "Footer" }}
+{{ end }}

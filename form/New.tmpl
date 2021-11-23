@@ -1,0 +1,24 @@
+{{ define "New" }}
+  {{ template "Header" }}
+    <div class="container">
+     <div class="p-3 mb-2 bg-light text-dark" style="min-height:700px">
+    {{ template "Menu" }} 
+   <h2>New Name and City</h2>  
+    <form method="POST" action="insert">
+      <label class="form-label col-2"> Name </label>
+      <input type="text" name="name" class="col-8" /><br />
+    
+      <label class="form-label col-2"> Salary </label>
+      <input type="text" name="salary" class="col-8" /><br />
+
+      <label class="form-label col-2" > Destignation </label>
+
+      <input type="text" name="destignation" class="col-8" /><br />
+
+
+      <input type="submit" class="btn btn-info" value="Save user" />
+    </form>
+  {{ template "Footer" }}
+{{ end }}
+</div>
+</div>
